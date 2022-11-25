@@ -7,7 +7,8 @@ import Detail from "./routes/Detail";
 
 function App() {
   return (
-    <Router>
+    // basename required for gh pages publishing
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<Detail />} />
